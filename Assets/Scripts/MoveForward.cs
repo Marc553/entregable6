@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveForward : MonoBehaviour
 {
     public float Speed = 20; //velocidad del projetil 
-    private float zRangeUp = 20; //numero del limite de la pantalla 
+    private float limitRange = 40; //numero del limite de la pantalla 
 
     void Update()
     {
@@ -13,8 +13,24 @@ public class MoveForward : MonoBehaviour
 
         transform.Translate(Vector3.forward * Speed * Time.deltaTime);
 
-        //Limite de pantalla  
-        if (transform.position.z > zRangeUp)
+        //Limite de pantalla X 
+        if (transform.position.x > limitRange)
+        {
+            Destroy(gameObject);
+        }
+        
+        if (transform.position.x < -limitRange)
+        {
+            Destroy(gameObject);
+        }
+        
+        //Limite de pantalla Y
+        if (transform.position.y > limitRange)
+        {
+            Destroy(gameObject);
+        }
+       
+        if (transform.position.y < -limitRange)
         {
             Destroy(gameObject);
         }
