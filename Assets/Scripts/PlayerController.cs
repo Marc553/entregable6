@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject proyectil;
-    private Quaternion right = Quaternion.Euler(0, 90, 0);
+    public GameObject proyectil; //object que se lanza
+    private Quaternion right = Quaternion.Euler(0, 90, 0); 
     private Quaternion left = Quaternion.Euler(0, -90, 0);
     private Quaternion up = Quaternion.Euler(-90, 0, 0);
     private Quaternion down = Quaternion.Euler(90, 0, 0);
